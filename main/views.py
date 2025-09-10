@@ -49,7 +49,7 @@ def show_json(request):
     json_data = serializers.serialize("json", news_list)
     return HttpResponse(json_data, content_type="application/json")
 
-def show_xml_by_id(request, news_id)
+def show_xml_by_id(request, news_id):
    try:
        news_item = News.objects.filter(pk=news_id)
        xml_data = serializers.serialize("xml", news_item)
